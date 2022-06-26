@@ -12,18 +12,3 @@ palletItemEl.forEach(element => {
   element.style.backgroundColor = color;
   element.dataset.color = color;
 });
-
-const onPalletElClick = event => {
-  const palletEl = event.target;
-
-  if (palletEl.nodeName !== 'LI') {
-    return;
-  }
-
-  const currentColor = palletEl.dataset.color;
-  const outputEl = palletEl.querySelector('.pallet__item-color');
-
-  outputEl.textContent = currentColor;
-};
-
-palletEl.addEventListener('click', onPalletElClick);
