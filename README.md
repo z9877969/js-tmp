@@ -1,40 +1,9 @@
-# Занятие 15:
+# Занятие 16:
 
-- Термінал
-  - [Шпаргалка 1](https://tproger.ru/translations/bash-cheatsheet/)
-  - [Шпаргалка 2](https://habr.com/ru/company/ruvds/blog/445270/)
-  - Відкрити
-    - `control + ~`
-    - `view > teminal`
-  - Основні корисні команди
-    - шлях (pwd)
-    - список (ls)
-    - навигація (cd)
-    - очистка `clear` или `control + l`
-    - створення файлів (touch)
-    - створення папок (mkdir)
-    - перейменування/переміщення (mv)
-    - копія (cp)
-    - видалення (rm)
-    - дізнатися інформацію про команду (man команда)
-- Node.js и npm
-  - установка
-  - ініціалізація і package.json
-  - [npmjs.com](https://www.npmjs.com/)
-  - робота з пакетами
-    - установка
-    - видалення
-  - CommonJS модулі
-  - npm-скрипти
-    - pre і post
-- Транспіляція коду
-  - CLI и npm-скрипти
-  - [Babel](https://babeljs.io/)
-  - [Autoprefixer](https://www.npmjs.com/package/autoprefixer)
-  - Пресети
-  - [Browserslist](https://github.com/browserslist/browserslist)
-- [Сборщик Parcel](https://parceljs.org/)
-- [ECMAScript модули](https://exploringjs.com/es6/ch_modules.html)
-  - Дефолтний (default) експорт та імпорт
-  - Іменований (named) експорт та імпорт
-  - Імпорт простору імен (namespace)
+- Формат даних JSON: сфера застосування у веб-розробці
+- JSON: синтаксис, типи даних та валідація
+- Методи JSON.parse() та JSON.stringify()
+- Конструкція try...catch для JSON.parse()
+- Зберігання інформації на клієнті: сфера застосування
+- Властивості та методи localStorage
+- Зберігання складних типів даних: масиви, об'єкти
