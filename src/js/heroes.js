@@ -1,5 +1,11 @@
-'use strict';
-// import heroesDb from './heroes.json';
+import heroesTmp from '../templates/heroes.hbs';
+
+console.log(
+  heroesTmp([
+    { id: 1, firstName: 'Bob' },
+    { id: 1, firstName: 'Bob' },
+  ])
+);
 
 /*
 <li class="heroes__item">
@@ -13,5 +19,3 @@
     </div>
 </li>
 */
-
-const heroesListEl = document.querySelector('.js-heroes-list');
