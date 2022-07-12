@@ -1,5 +1,5 @@
 'use strict';
-// import axios from 'axios';
+import axios from 'axios';
 
 export class UnsplashApi {
   #BASE_URL = 'https://api.unsplash.com';
@@ -8,41 +8,32 @@ export class UnsplashApi {
   constructor() {
     this.page = 1;
     this.query = null;
+    axios.defaults.baseURL = this.#BASE_URL;
   }
 
   fetchPhotos() {
-    const search = new URLSearchParams({
+    axios.defaults.params = {
       query: this.query, // cat
       page: this.page,
       per_page: 12,
       client_id: this.#API_KEY,
-    });
+    };
 
-    return fetch(`${this.#BASE_URL}/search/photos?${search}`)
-      .then(response => {
-        if (!response.ok) {
-          throw 'Error';
-        }
-
-        return response.json();
-      })
+    return axios
+      .get(`/search/photos`)
+      .then(response => response.data)
       .catch(err => console.log(err));
   }
 
   fetchRandomPhotos() {
-    const search = new URLSearchParams({
+    axios.defaults.params = {
       count: 12,
       client_id: this.#API_KEY,
-    });
+    };
 
-    return fetch(`${this.#BASE_URL}/photos/random?${search}`)
-      .then(response => {
-        if (!response.ok) {
-          throw 'Error';
-        }
-
-        return response.json();
-      })
+    return axios
+      .get(`/photos/random`)
+      .then(response => response.data)
       .catch(err => console.log(err));
   }
 
